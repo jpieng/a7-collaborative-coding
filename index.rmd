@@ -23,7 +23,8 @@ chart1 <- make_INFOinterest_chart(data)
 `r chart1`
 
 ```{r, echo=FALSE, results='hide', message=FALSE}
-# Retrieve function from `chartfile1.R`
-source("scripts/chartfile2.R")
+source("scripts/chartfile2.r")
+chart2 <- make_bar_chart(data)
 ```
 
+`r chart2`
