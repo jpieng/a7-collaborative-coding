@@ -1,24 +1,29 @@
 ```{r, echo=FALSE, results='hide', message=FALSE}
+# Assignment 7 - Collaborative Coding with class survey dataset
 # Load packages
 library(dplyr)
 library(plotly)
+library(knitr)
 
 # Read in class survey data
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 
-# Retrieve functions from `summary-information.r`
-source("scripts/summary-information.r")
+# Retrieve functions from `summary-information.R`
+source("scripts/summary-information.R")
+
 ```
 
 
 ```{r, echo=FALSE, results='hide', message=FALSE}
-source("scripts/chartfile1.r")
+# Retrieve function from `chartfile1.R`
+source("scripts/chartfile1.R")
 chart1 <- make_INFOinterest_chart(data)
 ```
 
 `r chart1`
 
 ```{r, echo=FALSE, results='hide', message=FALSE}
-
+# Retrieve function from `chartfile1.R`
+source("scripts/chartfile2.R")
 ```
 
