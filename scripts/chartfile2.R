@@ -1,10 +1,5 @@
 #Assignment 7: Chart file 2
 
-#load libraries
-library(dplyr)
-library(plotly)
-library(jsonlite)
-
 # creates a bar chart comparing the distribution of
 # class standings
 make_bar_chart <- function (the_data) {
