@@ -1,8 +1,5 @@
 # a7-collaborative-coding
 
-Description coming soon.
-
-
 ##### 1. Did you receive any help from others (classmates, etc)? If so, please list who.
 
 > Answer goes here!

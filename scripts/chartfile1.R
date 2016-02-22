@@ -1,5 +1,4 @@
 # Assignment 7 - Chart File 1
-# data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 
 # Write a function that takes in a dataset as a parameter, and returns a visualization 
 # of that data, allowing you to call your charting function from your index.Rmd file.
