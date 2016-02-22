@@ -1,20 +1,24 @@
----
-title: "index"
-output: html_document
----
+```{r, echo=FALSE, results='hide', message=FALSE}
+# Load packages
+library(dplyr)
+library(plotly)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Read in class survey data
+data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
+# Retrieve functions from `summary-information.r`
+source("scripts/summary-information.r")
 ```
 
-You can also embed plots, for example:
 
-```{r, echo=FALSE}
-plot(cars)
+```{r, echo=FALSE, results='hide', message=FALSE}
+source("scripts/chartfile1.r")
+chart1 <- make_INFOinterest_chart(data)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+`r chart1`
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+
+```
+
