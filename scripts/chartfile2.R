@@ -11,14 +11,14 @@ make_bar_chart <- function (the_data) {
   # Creates new data.frame grouped by class standing and
   # number of students in each respective class standing.
   summarized_data <- the_data %>% 
-    group_by(What.is.your.current.class.standing.) %>% 
+    group_by(class_standing) %>% 
     summarise(
       num_students = n()
     )
   
   # Makes bar chart
   plot_ly(summarized_data,
-          x = What.is.your.current.class.standing., 
+          x = class_standing, 
           y = num_students,
           name = "Class Standing Distribution of INFO498F",
           type = "bar"
