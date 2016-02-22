@@ -1,6 +1,8 @@
 library(dplyr)
 
 info_function <- function(dataset) {
+    #dataset <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+  
     ret <- list()
     ret$length <- length(dataset)
     
