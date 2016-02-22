@@ -1,7 +1,7 @@
 library(dplyr)
 
-info_function <- function(dataset) {
-    #dataset <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+info_function <- function(data) {
+    dataset <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
   
     ret <- list()
     ret$length <- length(dataset)
@@ -64,6 +64,9 @@ info_function <- function(dataset) {
     ret$num_seahawks_fan <- dataset_formatted %>% filter(seahawks_fan == "Yes") %>% nrow()
     ret$num_major_seahawks_fan <- dataset_formatted %>% filter(seahawks_fan == "YES!") %>% nrow()
     ret$num_not_seahawks_fan <- dataset_formatted %>% filter(seahawks_fan == "No") %>% nrow()
+    
+    #Error in recognizing ret
+    print(ret$num_of_freshman)
     
     return (ret)        
 }
