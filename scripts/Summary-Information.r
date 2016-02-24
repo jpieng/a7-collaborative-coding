@@ -111,13 +111,11 @@ info_function <- function(dataset) {
                                       nrow()
   
   ret$num_moderate_programming_exp <- dataset %>% 
-                                        filter(programming_experience == "Moderate experience with a scripting 
-                                                                          language (Python, R, JavaScript, Java, etc.)") %>% 
+                                        filter(programming_experience == "Moderate experience with a scripting language (Python, R, JavaScript, Java, etc.)") %>% 
                                           nrow()
   
   ret$num_high_programmig_exp <- dataset %>% 
-                                  filter(programming_experience == "Lots of experience with a scripting 
-                                                                    language (Python, R, JavaScript, Java, etc.)") %>% 
+                                  filter(programming_experience == "Lots of experience with a scripting language (Python, R, JavaScript, Java, etc.)") %>% 
                                     nrow()
   
   #Total number of countries visited
