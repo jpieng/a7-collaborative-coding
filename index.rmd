@@ -1,34 +1,37 @@
-```{r, echo=FALSE, results='hide', message=FALSE}
-# Assignment 7 - Collaborative Coding with class survey dataset
-# Load packages
+---
+title: "Assignment 7: Collaborative Coding"
+output: html_document
+---
+
+```{r setup, include=FALSE}
 library(dplyr)
 library(plotly)
 library(knitr)
 
-# Read in class survey data
-data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
-
-# Retrieve functions from `summary-information.R`
 source("scripts/summary-information.R")
-summaryList <- info_function(data)
+source("scripts/chartfile1.R")
+source("scripts/chartfile2.r")
 
-print(summaryList$num_of_freshman);
+data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+info <- info_function(data)
 
 ```
 
+Summary information
 
-```{r, echo=FALSE, results='hide', message=FALSE}
-# Retrieve function from `chartfile1.R`
-source("scripts/chartfile1.R")
+```{r Charts, echo=FALSE, message=FALSE, warning=FALSE}
+
 chart1 <- make_INFOinterest_chart(data)
+chart2 <- make_bar_chart(data)
+
+
 ```
 
 `r chart1`
-
-```{r, echo=FALSE, results='hide', message=FALSE}
-# Retrieve function from 'chartfile2.R'
-source("scripts/chartfile2.r")
-chart2 <- make_bar_chart(data)
-```
 
 `r chart2`
