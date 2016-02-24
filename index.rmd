@@ -10,6 +10,9 @@ data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/mas
 
 # Retrieve functions from `summary-information.R`
 source("scripts/summary-information.R")
+summaryList <- info_function(data)
+
+print(summaryList$num_of_freshman);
 
 ```
 
