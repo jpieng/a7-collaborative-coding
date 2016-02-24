@@ -122,8 +122,7 @@ info_function <- function(dataset) {
   
   #Total number of countries visited
   ret$total_countries_visited <- dataset %>% 
-                                  select(countries_visited) %>% 
-                                    nrow()
+                                  sum(countries_visited)  
   
   #Number of dog / cat people
   ret$num_dog_person <- dataset %>% 
