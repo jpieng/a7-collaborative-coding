@@ -37,14 +37,7 @@ twelfth <- pc(info$num_seahawks_fan + info$num_major_seahawks_fan)
 
 ### Highlights from the survey
 
-Of the `r total` students who took the intro survey,
-
-- `r sp`% are sophomores
-- `r major`% want to be Informatics majors
-- `r xp`% have moderate programming experience
-- `r os`% use Windows machines
-- `r pet`% are dog people
-- `r twelfth`% are Seahawks fans
+This is a report of data collected from `r total` students from the winter 2016 INFO 498F class who took a survey. Based on the results, `r sp`% are sophomores, `r major`% want to be Informatics majors, `r xp`% have moderate programming experience, `r os`% use Windows machines, `r pet`% are dog people, and `r twelfth`% are Seahawks fans.
 
 &nbsp;
 
@@ -53,16 +46,16 @@ chart1 <- make_INFOinterest_chart(data)
 chart2 <- make_bar_chart(data)
 ```
 
-#### Here's a chart...
+#### Here's a chart displaying the distribution of the surveyed students interest in the Informatics major and the type of operating system they use.
 
-&nbsp;
+&nbsp; 
 
 `r chart1` 
 
 &nbsp;
 
-#### ... and here's another
+#### ... and here's another chart displaying the distribution of the class standing from those who completed the survey.
 
-&nbsp;
+&nbsp; 
 
 `r chart2`
