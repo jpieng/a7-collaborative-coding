@@ -3,6 +3,8 @@ title: "Assignment 7: Collaborative Coding"
 output: html_document
 ---
 
+&nbsp;
+
 ```{r setup, include=FALSE}
 library(dplyr)
 library(plotly)
@@ -13,25 +15,55 @@ source("scripts/chartfile1.R")
 source("scripts/chartfile2.r")
 
 data <- read.csv("https://raw.githubusercontent.com/INFO-498F/a7-survey-data/master/intro_survey_data.csv")
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
+```{r Info, echo=FALSE, message=FALSE, warning=FALSE}
 info <- info_function(data)
 
+total <- info$num_of_freshman + info$num_of_sophomores + info$num_of_junior + info$num_of_senior
+
+pc <- function(x) {
+  return(round(x/total * 100))
+}
+
+sp <- pc(info$num_of_sophomores)
+major <- pc(info$num_applying_to_major)
+xp <- pc(info$num_moderate_programming_exp)
+os <- pc(info$num_windows_users)
+pet <- pc(info$num_dog_person)
+twelfth <- pc(info$num_seahawks_fan + info$num_major_seahawks_fan)
 ```
 
-Summary information
+### Highlights from the survey
+
+Of the `r total` students who took the intro survey,
+
+- `r sp`% are sophomores
+- `r major`% want to be Informatics majors
+- `r xp`% have moderate programming experience
+- `r os`% use Windows machines
+- `r pet`% are dog people
+- `r twelfth`% are Seahawks fans
+
+&nbsp;
 
 ```{r Charts, echo=FALSE, message=FALSE, warning=FALSE}
-
 chart1 <- make_INFOinterest_chart(data)
 chart2 <- make_bar_chart(data)
-
-
 ```
 
-`r chart1`
+#### Here's a chart...
+
+&nbsp; 
+
+`r chart1` 
+
+&nbsp;
+
+#### ... and here's another
+
+&nbsp; 
 
 `r chart2`
