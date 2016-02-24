@@ -3,7 +3,6 @@ title: "Assignment 7: Collaborative Coding"
 output: html_document
 ---
 
-&nbsp;
 
 ```{r setup, include=FALSE}
 library(dplyr)
@@ -47,7 +46,7 @@ Of the `r total` students who took the intro survey,
 - `r pet`% are dog people
 - `r twelfth`% are Seahawks fans
 
-&nbsp;
+
 
 ```{r Charts, echo=FALSE, message=FALSE, warning=FALSE}
 chart1 <- make_INFOinterest_chart(data)
@@ -56,14 +55,13 @@ chart2 <- make_bar_chart(data)
 
 #### Here's a chart...
 
-&nbsp; 
+
 
 `r chart1` 
 
-&nbsp;
 
 #### ... and here's another
 
-&nbsp; 
+
 
 `r chart2`
