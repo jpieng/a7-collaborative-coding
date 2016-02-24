@@ -115,14 +115,11 @@ info_function <- function(dataset) {
     nrow()
   
   ret$num_high_programmig_exp <- dataset %>% 
-    filter(programming_experience == "Lots of experience with a scripting 
-           language (Python, R, JavaScript, Java, etc.)") %>% 
+    filter(programming_experience == "Lots of experience with a scripting language (Python, R, JavaScript, Java, etc.)") %>% 
     nrow()
   
   #Total number of countries visited
-  ret$total_countries_visited <- dataset %>% 
-    select(countries_visited) %>% 
-    nrow()
+  ret$total_countries_visited <- sum(dataset$countries_visited)
   
   #Number of dog / cat people
   ret$num_dog_person <- dataset %>% 
